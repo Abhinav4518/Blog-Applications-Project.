@@ -1,0 +1,19 @@
+<%- include("partials/header.ejs") %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js Blog</title>
+</head>
+<body>
+    <h1>Hi there! Welcome to my Blog.</h1>
+    <a href="/new">Create Post.</a>
+    <ul>
+        <% posts.forEach((post, index) => { %>
+            <li><a href="/post/<%= index %>"><%= post.title %></a></li>
+        <% }); %>
+    </ul>
+</body>
+</html>
+<%- include("partials/footer.ejs") %>
